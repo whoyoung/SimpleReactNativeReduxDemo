@@ -1,0 +1,2 @@
+# SimpleReactNativeReduxDemo
+简单的reactNative+reactRedux Demo
