@@ -8,7 +8,6 @@ class entranceComponent extends Component {
 
     constructor(props) {
         super(props);
-        console.log('======='+JSON.stringify(props));
     }
 
     render() {

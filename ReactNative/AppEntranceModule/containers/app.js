@@ -9,7 +9,9 @@ import reducers from '../reducers';
 const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);
 const store = createStoreWithMiddleware(reducers);
 
+import NavigationStyles from '../../Common/navigationStyles';
 import LoadInit from './initDataContent';
+import ReduxDemo from '../../ReduxDemo';
 
 export default class app extends Component {
     constructor(props) {
@@ -18,18 +20,21 @@ export default class app extends Component {
 
     componentWillMount() {
     }
-
-    componentWillUnmount() {
-    }
-
     componentDidMount() {
+    }
+    componentWillUnmount() {
     }
 
     render() {
         return (
             <Provider store={store}>
                 <RouterWithRedux>
-                    <Scene key="xsy_initData" title="initData" initial={true} component={LoadInit} hideNavBar={true} />
+                    <Scene key="yh_initData" title="initData" initial={true} component={LoadInit} hideNavBar={true} />
+                    <Scene key="yh_reduxDemo" title="reduxDemo" component={ReduxDemo} hideNavBar={false} 
+                        navigationBarStyle={[NavigationStyles.systemNavigatorStyle, { backgroundColor: 'blue' }]}
+                        titleStyle={NavigationStyles.systemTitleStyle}
+                        leftButtonIconStyle={NavigationStyles.systemNavigationButtonLeft}
+                        backButtonImage={require('../../Common/images/nav_bar_back.png')}/>
                 </RouterWithRedux>
             </Provider>
         )
