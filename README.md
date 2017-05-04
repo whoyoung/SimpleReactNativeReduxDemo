@@ -3,5 +3,6 @@ A simple ReactNative Demo combined with :
 * redux
 * react-redux
 * react-native-router-flux
-* redux-thunk
+* redux-thunk <br>
+![gif](./gifDemo/ReactNativeReduxDemo.gif)
 
